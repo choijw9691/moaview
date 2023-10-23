@@ -11,7 +11,7 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun dao(): ContentsDao
 
-    companion object {
+/*    companion object {
         @Volatile
         private var INSTANCE: AppDatabase? = null
         fun getDatabase(): AppDatabase {
@@ -26,5 +26,5 @@ abstract class AppDatabase : RoomDatabase() {
                 instance
             }
         }
-    }
+    }*/
 }

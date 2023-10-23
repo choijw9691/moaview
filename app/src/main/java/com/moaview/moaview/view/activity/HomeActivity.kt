@@ -32,6 +32,7 @@ import com.moaview.moaview.view.fragment.GuideDialogFragment
 import com.moaview.moaview.view.fragment.OptionFragment
 import com.moaview.moaview.view.fragment.SearchFragment
 import com.moaview.moaview.view.fragment.UpdateFragment
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
@@ -41,18 +42,17 @@ import kotlinx.coroutines.runBlocking
 import java.io.File
 
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
 
-    private val viewModel: ContentsViewModel by viewModels {
-        ContentsViewModelFactory((application as ViewerApplication).repository)
-    }
+    private val viewModel: ContentsViewModel by viewModels()
 
     private var isStart = false
 
     companion object {
-        val rootPath = ViewerApplication.getApplicationContext().getExternalFilesDir(null)?.absolutePath + File.separator
+        var rootPath = ""
         var bookListFragmentSortState = SortState.READ
         lateinit var settingData: SettingData
         val CURRENT_PAGE = 2003103
@@ -60,15 +60,13 @@ class HomeActivity : AppCompatActivity() {
     }
     override fun onBackPressed() {
         super.onBackPressed()
-        Log.d("JIWOUNG","backehck123")
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-//        authorizationCheck()
-        // getSettingData()
+        rootPath = getExternalFilesDir(null)?.absolutePath + File.separator
 
         viewModel.test.observe(this) {
 

@@ -28,10 +28,12 @@ import com.moaview.moaview.view.WrapContentLinearLayoutManager
 import com.moaview.moaview.view.activity.HomeActivity
 import com.moaview.moaview.viewmodel.ContentsViewModel
 import com.google.android.material.appbar.MaterialToolbar
+import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 import java.io.IOException
 
 
+@AndroidEntryPoint
 class UpdateFragment : BaseFragment<FragmentUpdateBinding>(FragmentUpdateBinding::inflate) {
 
     private val viewModel: ContentsViewModel by activityViewModels()

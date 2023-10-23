@@ -4,8 +4,9 @@ import androidx.lifecycle.LiveData
 import com.moaview.moaview.dao.ContentsDao
 import com.moaview.moaview.common.State
 import com.moaview.moaview.db.ContentsEntity
+import javax.inject.Inject
 
-class ContentsRepository(private val contentsDao: ContentsDao) {
+class ContentsRepository @Inject constructor(private val contentsDao: ContentsDao) {
 
     val allContents: LiveData<List<ContentsEntity>> = contentsDao.getAll()
 

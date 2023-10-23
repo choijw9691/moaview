@@ -295,7 +295,7 @@ class FileListAdapter(
                 } else {
                     CoroutineScope(Dispatchers.Main).launch{
                         holder.binding.BooksCount.text = String.format(
-                            ViewerApplication.getApplicationContext().getString(
+                            holder.binding.BooksCount.context.getString(
                                 R.string.total_contents
                             ), (currentList.size - 1)
                         )

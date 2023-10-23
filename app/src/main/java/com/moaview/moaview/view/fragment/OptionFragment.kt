@@ -5,7 +5,9 @@ import android.view.View
 import com.moaview.moaview.R
 import com.moaview.moaview.databinding.FragmentOptionBinding
 import com.moaview.moaview.view.common.CustomDialog
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OptionFragment : BaseFragment<FragmentOptionBinding>(FragmentOptionBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

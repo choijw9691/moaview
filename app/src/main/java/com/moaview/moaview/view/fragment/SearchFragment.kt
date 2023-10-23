@@ -34,9 +34,11 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.moaview.moaview_sdk.data.Entity
 import com.moaview.moaview_sdk.view.activity.ViewerActivity
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 import kotlin.collections.set
 
+@AndroidEntryPoint
 class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding::inflate),
     View.OnClickListener {
 

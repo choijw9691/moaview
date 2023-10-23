@@ -8,13 +8,16 @@ import com.moaview.moaview.common.SortState
 import com.moaview.moaview.common.State
 import com.moaview.moaview.view.activity.HomeActivity
 import com.moaview.moaview.util.CommonUtil
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.HashMap
+import javax.inject.Inject
 
-class ContentsViewModel(private val contentsRepository: ContentsRepository) : ViewModel() {
+@HiltViewModel
+class ContentsViewModel @Inject constructor(private val contentsRepository: ContentsRepository) : ViewModel() {
     private val _allContents = MutableLiveData<List<ContentsEntity>>()
     val allContents: LiveData<List<ContentsEntity>> get() = _allContents
 

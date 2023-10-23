@@ -4,12 +4,14 @@ import android.app.Application
 import android.content.Context
 import com.moaview.moaview.db.AppDatabase
 import com.moaview.moaview.db.ContentsRepository
+import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 
+@HiltAndroidApp
 class ViewerApplication: Application() {
 
-    init{
+/*    init{
         instance = this
     }
 
@@ -22,5 +24,5 @@ class ViewerApplication: Application() {
 
     val applicationScope = CoroutineScope(SupervisorJob())
     val database by lazy { AppDatabase.getDatabase() }
-    val repository by lazy { ContentsRepository(database.dao()) }
+    val repository by lazy { ContentsRepository(database.dao()) }*/
 }

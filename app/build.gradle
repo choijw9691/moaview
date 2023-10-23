@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+
 }
 
 android {
@@ -42,6 +44,8 @@ android {
 
 def lifecycle_version = "2.4.0"
 def roomVersion = '2.5.2'
+def hilt_version = '2.44'
+
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.8.0'
@@ -59,9 +63,8 @@ dependencies {
     implementation 'androidx.activity:activity-ktx:1.1.0'
 
     //hilt
-    implementation "com.google.dagger:hilt-android:2.42"
-    implementation 'android.arch.lifecycle:extensions:1.1.1'
-    kapt "com.google.dagger:hilt-compiler:2.42"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
 
     //coroutine
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5"

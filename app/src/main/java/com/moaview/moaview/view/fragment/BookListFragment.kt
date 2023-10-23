@@ -39,12 +39,14 @@ import com.moaview.moaview.databinding.FragmentBookListBinding
 import com.moaview.moaview.util.CommonUtil
 import com.moaview.moaview_sdk.data.Entity
 import com.moaview.moaview_sdk.view.activity.ViewerActivity
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
+@AndroidEntryPoint
 class BookListFragment : BaseFragment<FragmentBookListBinding>(FragmentBookListBinding::inflate), View.OnClickListener {
 
     private lateinit var parentsActivity: HomeActivity
