@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/commonAppBar"
+            layout="@layout/common_app_bar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/appbar"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_touch"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="11dp"
+                    android:paddingTop="11dp"
+                    android:text="터치 설정"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+                <RelativeLayout
+                    android:id="@+id/pageTurnSettingTypeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_border"
+                    android:minHeight="60dp"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="페이지넘김 옵션"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/rightArrowButton"
+                        android:layout_width="6dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/btn_go_set" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/icon_page"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="11dp"
+                    android:paddingTop="11dp"
+                    android:text="페이지 설정"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+                <RelativeLayout
+                    android:id="@+id/twoPageModeInOrientationContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_border"
+                    android:minHeight="60dp"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="가로모드에서 두 쪽 보기"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/twoPageModeInOrientationSwitchBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textOff="Off"
+                        android:textOn="On"
+                        android:thumb="@drawable/switch_thumb_color_selector"
+                        app:track="@drawable/selector_switch" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/twoPageModeInFirstPageContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_border"
+                    android:minHeight="60dp"
+                    android:padding="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="첫 페이지에서부터 두 쪽 보기"
+                        android:textColor="@color/black" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/twoPageModeInFirstPageSwitchBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textOff="Off"
+                        android:textOn="On"
+                        android:thumb="@drawable/shape_switch_thumb"
+                        app:track="@drawable/selector_switch" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:drawableLeft="@drawable/icon_setting_s"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="11dp"
+                    android:paddingTop="11dp"
+                    android:text="뷰어 설정"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+                <RelativeLayout
+                    android:id="@+id/hideSoftKeySwitchContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_border"
+                    android:minHeight="60dp"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="소프트키 숨기기"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/hideSoftKeySwitchBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textOff="Off"
+                        android:textOn="On"
+                        android:thumb="@drawable/switch_thumb_color_selector"
+                        app:track="@drawable/selector_switch" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fixedScreenRotationContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_border"
+                    android:minHeight="60dp"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="화면 회전 고정"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/fixedScreenRotationSwitchBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textOff="Off"
+                        android:textOn="On"
+                        android:thumb="@drawable/switch_thumb_color_selector"
+                        app:track="@drawable/selector_switch" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/screenAlwaysOnContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_border"
+                    android:minHeight="60dp"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="화면 항상 켜짐"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/screenAlwaysOnSwitchBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textOff="Off"
+                        android:textOn="On"
+                        android:thumb="@drawable/switch_thumb_color_selector"
+                        app:track="@drawable/selector_switch" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pageTurnVolumeKeyContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_border"
+                    android:minHeight="60dp"
+                    android:visibility="gone"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="볼륨키 페이지 넘김"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/pageTurnVolumeKeySwitchBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textOff="Off"
+                        android:textOn="On"
+                        android:thumb="@drawable/switch_thumb_color_selector"
+                        app:track="@drawable/selector_switch" />
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/resetButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100dp"
+                    android:padding="18dp"
+                    android:stateListAnimator="@null"
+                    android:text="설정초기화"
+                    android:textColor="@color/grey_700"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="10dp"
+                    app:strokeColor="@color/border_color"
+                    app:strokeWidth="1dp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</RelativeLayout>

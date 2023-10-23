@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f4f6f9"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/commonAppBar"
+            layout="@layout/common_app_bar" />
+
+        <RelativeLayout
+            android:id="@+id/modifyRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/color_f4f6f9"
+            android:elevation="0dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/checkIcon"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/color_f45b7f"
+                android:background="@drawable/check_on_2" />
+
+            <TextView
+                android:id="@+id/choiceBookTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/checkIcon"
+                android:gravity="center"
+                android:text="0권 선택"
+                style="@style/text_title_14" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/button_cancel"
+                android:text="@string/select_all"
+                app:cornerRadius="5dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/color_c1c1c1"
+                app:icon="@drawable/select"
+                app:iconTint="@null"
+                app:iconSize="10dp"
+                android:backgroundTint="@color/white"
+                app:iconGravity="textStart"
+                app:iconPadding="5dp"
+                app:rippleColor="@color/white"
+                style="@style/text_option_menu" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/cancel"
+                app:cornerRadius="5dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/color_c1c1c1"
+                app:icon="@drawable/close"
+                app:iconTint="@null"
+                app:iconSize="10dp"
+                app:rippleColor="@color/white"
+                android:backgroundTint="@color/white"
+                app:iconGravity="start"
+                app:iconPadding="5dp"
+                style="@style/text_option_menu" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/basicRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/color_f4f6f9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:text="전체 29"
+                android:textColor="@color/color_212121"
+                android:fontFamily="@font/notosanskr_bold"
+                android:id="@+id/totalCount" />
+
+            <ImageView
+                android:id="@+id/editButton"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sort_thrash" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/bookmark_empty_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="53dp"
+                android:background="@drawable/img_nofile" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="23dp"
+                android:text="@string/empty_note"
+                android:fontFamily="@font/notosanskr_medium"
+                style="@style/text_16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/removeButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/delete"
+        android:textColor="@color/color_ffffff"
+        android:visibility="gone"
+        app:backgroundTint="@color/color_f45b7f"
+        app:cornerRadius="0dp"
+        style="@style/text_title_15" />
+</RelativeLayout>

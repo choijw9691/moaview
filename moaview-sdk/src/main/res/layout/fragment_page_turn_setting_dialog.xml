@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/commonAppBar"
+            layout="@layout/common_app_bar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/appbar"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio_prev_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:paddingRight="10dp"
+                        android:gravity="right|center_vertical"
+                        android:button="@drawable/radiobutton_selector_bk"
+                        android:layoutDirection="rtl"
+                        android:text="@string/PageTurnSettingType_BEFORE_NEXT"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_212121"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:includeFontPadding="false"
+                        app:useMaterialThemeColors="false"
+                        app:drawableLeftCompat="@drawable/touch_prev_next" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_f1f1f1"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_next_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:paddingRight="10dp"
+                        android:gravity="right|center_vertical"
+                        android:button="@drawable/radiobutton_selector_bk"
+                        android:layoutDirection="rtl"
+                        android:text="@string/PageTurnSettingType_NEXT_NEXT"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_212121"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:includeFontPadding="false"
+                        app:useMaterialThemeColors="false"
+                        app:drawableLeftCompat="@drawable/touch_next_next" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_f1f1f1"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_top_prev_bottom_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:paddingRight="10dp"
+                        android:gravity="right|center_vertical"
+                        android:button="@drawable/radiobutton_selector_bk"
+                        android:layoutDirection="rtl"
+                        android:text="@string/PageTurnSettingType_TOP_DOWN_BEFORE_NEXT"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_212121"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:includeFontPadding="false"
+                        app:useMaterialThemeColors="false"
+                        app:drawableLeftCompat="@drawable/touch_top_prev_bottom_next" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_f1f1f1"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_top_next_bottom_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:paddingRight="10dp"
+                        android:gravity="right|center_vertical"
+                        android:button="@drawable/radiobutton_selector_bk"
+                        android:layoutDirection="rtl"
+                        android:text="@string/PageTurnSettingType_TOP_DOWN_NEXT_NEXT"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_212121"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:includeFontPadding="false"
+                        app:useMaterialThemeColors="false"
+                        app:drawableLeftCompat="@drawable/touch_top_next_bottom_next" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_f1f1f1"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:paddingRight="10dp"
+                        android:gravity="right|center_vertical"
+                        android:button="@drawable/radiobutton_selector_bk"
+                        android:layoutDirection="rtl"
+                        android:text="@string/PageTurnSettingType_NEXT_BEFORE"
+                        android:textSize="14sp"
+                        android:textColor="@color/color_212121"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:includeFontPadding="false"
+                        app:useMaterialThemeColors="false"
+                        app:drawableLeftCompat="@drawable/touch_left_hand" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_f1f1f1"/>
+
+
+                </RadioGroup>
+
+
+                <!--                <RelativeLayout-->
+                <!--                    android:id="@+id/pageTurnSettingTypeContainer1"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@drawable/view_border_back_white"-->
+                <!--                    android:minHeight="60dp"-->
+                <!--                    android:padding="15dp">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/before1"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentLeft="true"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:text="이전" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="60dp"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:background="@drawable/img_move_01"-->
+                <!--                        android:id="@+id/imageContainer1"-->
+                <!--                        android:layout_marginLeft="10dp"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:layout_toRightOf="@+id/before1" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_toRightOf="@+id/imageContainer1"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:text="다음" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/pageTurnSettingTypeTextView1"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:layout_toLeftOf="@+id/rightArrowButton1"-->
+                <!--                        android:text="@string/PageTurnSettingType_BEFORE_NEXT"-->
+                <!--                        style="@style/text_page_turn_setting_14sp" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/rightArrowButton1"-->
+                <!--                        android:layout_width="20dp"-->
+                <!--                        android:layout_height="20dp"-->
+                <!--                        android:layout_alignParentRight="true"-->
+                <!--                        android:layout_centerInParent="true"-->
+                <!--                        android:background="@drawable/checkbox_selector_bk"-->
+                <!--                        android:button="@android:color/transparent" />-->
+                <!--                </RelativeLayout>-->
+
+                <!--                <RelativeLayout-->
+                <!--                    android:id="@+id/pageTurnSettingTypeContainer2"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@drawable/view_border_back_white"-->
+                <!--                    android:minHeight="60dp"-->
+                <!--                    android:padding="15dp">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/before2"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentLeft="true"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:text="다음" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="60dp"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:layout_marginLeft="10dp"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:id="@+id/imageContainer2"-->
+                <!--                        android:layout_toRightOf="@+id/before2"-->
+                <!--                        android:background="@drawable/img_move_02" />-->
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:layout_toRightOf="@+id/imageContainer2"-->
+                <!--                        android:text="다음" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/pageTurnSettingTypeTextView2"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:layout_toLeftOf="@+id/rightArrowButton2"-->
+                <!--                        android:text="@string/PageTurnSettingType_NEXT_NEXT"-->
+                <!--                        style="@style/text_page_turn_setting_14sp" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/rightArrowButton2"-->
+                <!--                        android:layout_width="20dp"-->
+                <!--                        android:layout_height="20dp"-->
+                <!--                        android:layout_alignParentRight="true"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:background="@drawable/checkbox_selector_bk"-->
+                <!--                        android:button="@android:color/transparent" />-->
+                <!--                </RelativeLayout>-->
+
+                <!--                <RelativeLayout-->
+                <!--                    android:id="@+id/pageTurnSettingTypeContainer3"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@drawable/view_border_back_white"-->
+                <!--                    android:minHeight="60dp"-->
+                <!--                    android:padding="15dp">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/before3"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentLeft="true"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:text="이전" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="60dp"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:layout_marginLeft="10dp"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:layout_toRightOf="@+id/before3"-->
+                <!--                        android:background="@drawable/img_move_03"-->
+                <!--                        android:id="@+id/imageContainer3" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignBottom="@+id/imageContainer3"-->
+                <!--                        android:layout_marginBottom="10dp"-->
+                <!--                        android:layout_toRightOf="@+id/imageContainer3"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:text="다음" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/pageTurnSettingTypeTextView3"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:layout_toLeftOf="@+id/rightArrowButton3"-->
+                <!--                        android:text="@string/PageTurnSettingType_TOP_DOWN_BEFORE_NEXT"-->
+                <!--                        style="@style/text_page_turn_setting_14sp" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/rightArrowButton3"-->
+                <!--                        android:layout_width="20dp"-->
+                <!--                        android:layout_height="20dp"-->
+                <!--                        android:layout_alignParentRight="true"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:background="@drawable/checkbox_selector_bk"-->
+                <!--                        android:button="@android:color/transparent" />-->
+                <!--                </RelativeLayout>-->
+
+                <!--                <RelativeLayout-->
+                <!--                    android:id="@+id/pageTurnSettingTypeContainer4"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@drawable/view_border_back_white"-->
+                <!--                    android:minHeight="60dp"-->
+                <!--                    android:padding="15dp">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/before4"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentLeft="true"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:minWidth="20dp"-->
+                <!--                        android:visibility="invisible" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="60dp"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:layout_marginLeft="10dp"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:layout_toRightOf="@+id/before4"-->
+                <!--                        android:id="@+id/imageContainer4"-->
+                <!--                        android:background="@drawable/img_move_04" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignBottom="@+id/imageContainer4"-->
+                <!--                        android:layout_marginBottom="10dp"-->
+                <!--                        android:layout_toRightOf="@+id/imageContainer4"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:text="다음" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignTop="@+id/imageContainer4"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:layout_toRightOf="@+id/imageContainer4"-->
+                <!--                        android:text="다음" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/pageTurnSettingTypeTextView4"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:layout_toLeftOf="@+id/rightArrowButton4"-->
+                <!--                        android:text="@string/PageTurnSettingType_TOP_DOWN_NEXT_NEXT"-->
+                <!--                        style="@style/text_page_turn_setting_14sp" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/rightArrowButton4"-->
+                <!--                        android:layout_width="20dp"-->
+                <!--                        android:layout_height="20dp"-->
+                <!--                        android:layout_alignParentRight="true"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:background="@drawable/checkbox_selector_bk"-->
+                <!--                        android:button="@android:color/transparent" />-->
+                <!--                </RelativeLayout>-->
+
+                <!--                <RelativeLayout-->
+                <!--                    android:id="@+id/pageTurnSettingTypeContainer5"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@drawable/view_border_back_white"-->
+                <!--                    android:minHeight="60dp"-->
+                <!--                    android:padding="15dp">-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/before5"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_alignParentLeft="true"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:text="다음" />-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="60dp"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:layout_marginLeft="10dp"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:layout_toRightOf="@+id/before5"-->
+                <!--                        android:id="@+id/imageContainer5"-->
+                <!--                        android:background="@drawable/img_move_05" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        style="@style/text_page_turn_setting_10sp"-->
+                <!--                        android:layout_toRightOf="@+id/imageContainer5"-->
+                <!--                        android:text="이전" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/pageTurnSettingTypeTextView5"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:layout_marginRight="10dp"-->
+                <!--                        android:layout_toLeftOf="@+id/rightArrowButton5"-->
+                <!--                        android:text="@string/PageTurnSettingType_NEXT_BEFORE"-->
+                <!--                        style="@style/text_page_turn_setting_14sp" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:id="@+id/rightArrowButton5"-->
+                <!--                        android:layout_width="20dp"-->
+                <!--                        android:layout_height="20dp"-->
+                <!--                        android:layout_alignParentRight="true"-->
+                <!--                        android:layout_centerVertical="true"-->
+                <!--                        android:background="@drawable/checkbox_selector_bk"-->
+                <!--                        android:button="@android:color/transparent" />-->
+                <!--                </RelativeLayout>-->
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</RelativeLayout>

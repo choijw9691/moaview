@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.GuideDialogFragment">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+></androidx.viewpager2.widget.ViewPager2>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/main_color"
+        >
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:button="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/checkbox_guide_selector" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다시 보지 않기"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/notosanskr_medium"
+            android:layout_marginLeft="7dp"
+            android:layout_centerVertical="true"
+    android:layout_toRightOf="@+id/checkButton"
+            ></TextView>
+        <ImageButton
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@drawable/btn_close"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+           android:backgroundTint="@color/white"
+            android:id="@+id/closeButton"
+            ></ImageButton>
+    </RelativeLayout>
+</RelativeLayout>

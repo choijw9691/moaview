@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_bottom_setting"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_draggable="true"
+    app:behavior_hideable="true"
+    tools:context=".view.fragment.SettingBottomSheetDialogFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_draggable="true"
+    app:behavior_hideable="true"
+    android:id="@+id/container"
+    >
+    <View
+        android:layout_width="65dp"
+        android:layout_height="3dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_d1d1d1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            style="@style/text_title_18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/ViewSettingDialog_TITLE" />
+
+        <!--TODO ssin :: 어디서 쓰이노 -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/ic_baseline_close_24"
+            android:backgroundTint="@color/grey_400"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:requiresFadingEdge="horizontal"
+        android:fadingEdgeLength="20dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--            <ImageView-->
+            <!--                android:layout_width="40dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_marginLeft="5dp"-->
+            <!--                android:layout_marginRight="5dp"-->
+            <!--                android:background="@drawable/ic_palette_outline"-->
+            <!--                android:visibility="invisible" />-->
+
+            <RadioButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:background="@drawable/round_background_white"
+                android:visibility="invisible"
+                android:buttonTint="@android:color/transparent"/>
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/color1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background_white"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+
+                <RadioButton
+                    android:id="@+id/color2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/color_f4f6f9"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+
+                <RadioButton
+                    android:id="@+id/color3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/view_setting3"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+
+                <RadioButton
+                    android:id="@+id/color4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/view_setting4"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+
+                <RadioButton
+                    android:id="@+id/color5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/view_setting5"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+
+                <RadioButton
+                    android:id="@+id/color6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/view_setting6"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+
+                <RadioButton
+                    android:id="@+id/color7"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/view_setting7"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+
+                <RadioButton
+                    android:id="@+id/color8"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/view_setting8"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+
+                <RadioButton
+                    android:id="@+id/color9"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/view_setting9"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+
+                <RadioButton
+                    android:id="@+id/color10"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/round_background"
+                    android:backgroundTint="@color/view_setting10"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+                <RadioButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/round_background_white"
+                    android:buttonTint="@android:color/transparent"
+                    style="@style/NoRipple" />
+            </RadioGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/slidebarContainer"
+        android:layout_marginHorizontal="23dp">
+
+        <ImageView
+            android:id="@+id/leftSunny"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/icon_negative" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slidebar"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/rightSunny"
+            android:layout_toRightOf="@+id/leftSunny"
+            android:valueFrom="0"
+            android:valueTo="100"
+            app:labelBehavior="gone"
+            app:thumbColor="@color/main_color"
+            app:thumbRadius="4dp"
+            app:trackColorActive="@color/main_color"
+            app:trackHeight="2dp"
+            app:trackColorInactive="@color/color_e1e1e1" />
+
+        <ImageView
+            android:id="@+id/rightSunny"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_positive"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/brightCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            app:buttonIcon="@drawable/checkbox_selector_bk" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/brightCheckBox"
+            android:text="@string/system_brightness"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textColor="@color/color_212121"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/system_brightness_info"
+            android:fontFamily="@font/notosanskr_regular"
+            android:textColor="@color/color_828282"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/toastButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/disable_slidebar_toast"
+        android:padding="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cornerRadius="10dp"
+        android:clickable="false"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/container"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom|center_horizontal" />
+</RelativeLayout>

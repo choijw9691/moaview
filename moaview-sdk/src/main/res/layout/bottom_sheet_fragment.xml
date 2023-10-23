@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/commonAppBar"
+        layout="@layout/common_app_bar" />
+
+    <!-- TODO ssin :: 메뉴 떠있는 경우 터치 겹치지 않도록 수정 필요-->
+
+    <View
+        android:id="@+id/outOfRealmView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="360dp"
+            android:layout_height="1dp"
+            android:background="#e5e7f4" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@color/white">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/reStartButtonInvisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:layout_centerVertical="true"
+                android:textSize="9sp"
+                android:text="@string/previous"
+                android:textColor="@color/color_c1c1c1"
+                android:stateListAnimator="@null"
+                android:backgroundTint="@color/color_f1f1f1"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/icon_redo"
+                app:strokeColor="@color/color_c1c1c1"
+                app:iconTint="@color/color_c1c1c1"
+                app:iconSize="8dp"
+                app:iconGravity="textStart"
+                app:iconPadding="5dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/reStartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:visibility="invisible"
+                android:layout_centerVertical="true"
+                android:textSize="9sp"
+                android:text="@string/previous"
+                android:textColor="@color/color_424242"
+                android:stateListAnimator="@null"
+                android:backgroundTint="@color/color_f1f1f1"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/icon_redo"
+                app:strokeColor="@color/color_c1c1c1"
+                app:iconTint="@color/color_424242"
+                app:iconSize="8dp"
+                app:iconGravity="textStart"
+                app:iconPadding="5dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slidebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_toRightOf="@+id/reStartButton"
+                android:layout_toLeftOf="@+id/pageStateContainer"
+                android:layout_centerVertical="true"
+                app:labelBehavior="gone"
+                app:thumbRadius="8dp"
+                app:trackHeight="2dp"
+                app:thumbColor="@color/color_f45b7f"
+                app:trackColorActive="@color/color_f45b7f"
+                app:trackColorInactive="@color/color_e1e1e1" />
+
+            <LinearLayout
+                android:id="@+id/pageStateContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11"
+                    android:id="@+id/currentPage"
+                    android:textColor="@color/color_f45b7f"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/208"
+                    android:id="@+id/totalPage"
+                    android:textSize="10sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigcation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:paddingBottom="25dp"
+            app:elevation="0dp"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@color/color_424242"
+            app:itemTextAppearanceActive="@style/BottomNavigationItemText"
+            app:itemTextAppearanceInactive="@style/BottomNavigationItemText"
+            app:menu="@menu/bottom_navigation_menu" />
+    </LinearLayout>
+</RelativeLayout>

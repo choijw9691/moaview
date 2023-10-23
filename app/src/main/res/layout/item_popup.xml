@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="105dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_corner_5"
+    android:clipToPadding="false"
+    android:translationZ="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/detailContent"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/detailContentImageView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/icon_detail_s" />
+
+        <TextView
+            android:id="@+id/detailContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/option_menu_detail"
+            style="@style/text_option_menu" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_f1f1f1" />
+
+    <LinearLayout
+        android:id="@+id/updateContent"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/updateContentImageView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/icon_modi_s" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/option_menu_modify"
+            android:id="@+id/updateContentTextView"
+            style="@style/text_option_menu"/>
+    </LinearLayout>
+
+</LinearLayout>

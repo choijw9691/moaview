@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.BookListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:backgroundTint="@color/white"
+                android:gravity="center">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:backgroundTint="@color/white"
+                    app:title="설정"
+                    app:titleCentered="true">
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/btn_back"
+                android:translationZ="10dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_e5e7f4"></View>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/appbar"
+            android:fillViewport="true"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="23dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/searchResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/icon_page"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="17dp"
+                    android:paddingBottom="23dp"
+                    android:text="앱 정보 및 이용약관"
+                    android:textColor="@color/color_212121"
+                    android:textSize="11sp"></TextView>
+
+                <RelativeLayout
+                    android:id="@+id/InfoVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="23dp"
+                    android:background="@drawable/view_border"
+                 >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="버전 정보"
+                        android:layout_marginBottom="18dp"
+
+                        android:textColor="@color/color_212121"
+                        android:textSize="14sp"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="6dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/btn_go_set"></androidx.appcompat.widget.AppCompatButton>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/buisnessVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_border"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="18dp"
+                    android:paddingRight="23dp"
+                  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="사업자 정보"
+                        android:textColor="@color/color_212121"
+                        android:textSize="14sp"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="6dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/btn_go_set"></androidx.appcompat.widget.AppCompatButton>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/TermsofUse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_border"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이용약관"></TextView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_baseline_keyboard_arrow_left_24"
+                        android:backgroundTint="@color/black"
+                        android:rotation="180"></androidx.appcompat.widget.AppCompatButton>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>

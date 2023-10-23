@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_touch_bottom_sheet"
+        android:icon="@drawable/ic_btm_01"
+        android:title="@string/menu_mode_slide"/>
+    <item
+        android:id="@+id/ic_bookmark_bottom_sheet"
+        android:icon="@drawable/ic_btm_02"
+        android:title="@string/menu_note"/>
+
+    <item
+        android:id="@+id/ic_format_bottom_sheet"
+        android:icon="@drawable/ic_btm_03"
+        android:title="@string/menu_view_setting"/>
+
+    <item
+        android:id="@+id/ic_settings_bottom_sheet"
+        android:icon="@drawable/ic_btm_04"
+        android:title="@string/menu_viewer_setting"/>
+</menu>

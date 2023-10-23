@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginHorizontal="18dp"
+    android:id="@+id/container"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/coverImage"
+            android:layout_width="32dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_zip"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/layout_list_item"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/coverImage"
+            android:layout_toLeftOf="@+id/checkButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/popupmenu"
+                android:text="가나다라마가나다라사아자"
+                style="@style/text_title_15"/>
+
+            <ImageView
+                android:id="@+id/popupmenu"
+                android:layout_width="20dp"
+                android:layout_alignTop="@+id/textID"
+                android:layout_height="18dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_option" />
+
+            <RelativeLayout
+                android:layout_alignEnd="@+id/popupmenu"
+                android:layout_below="@+id/textID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/date_fileSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="2022.02.28"
+                    style="@style/text_sub_12" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slidebar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:enabled="false"
+                    android:layout_alignTop="@+id/date_fileSize"
+                    android:layout_toRightOf="@+id/date_fileSize"
+                    android:layout_toLeftOf="@+id/pagePercent"
+                    android:valueFrom="0"
+                    android:valueTo="100"
+                    android:layout_centerVertical="true"
+                    app:thumbRadius="0dp"
+                    app:trackColorActive="@color/color_f45b7f" />
+
+                <TextView
+                    android:id="@+id/pagePercent"
+                    android:layout_width="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/slidebar"
+                    android:text="43%"
+                    style="@style/textview_slider_percent" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:buttonIcon="@drawable/checkbox_selector" />
+    </RelativeLayout>
+</LinearLayout>

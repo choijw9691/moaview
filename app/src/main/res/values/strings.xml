@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">모아뷰</string>
+    <string name="BookListFragment_title">서재</string>
+    <string name="InfoVersion">버전 정보</string>
+    <string name="BuisnessVersion">사업자 정보</string>
+    <string name="TermsofUse">버전 정보</string>
+    <string name="total_contents">전체 %d</string>
+    <string name="select_info">%d권 선택</string>
+    <string name="select_all">전체 선택</string>
+    <string name="deselect_all">전체 해제</string>
+    <string name="cancel">취소</string>
+    <string name="delete">삭제</string>
+    <string name="save">저장</string>
+    <string name="notify_back_key">뒤로가기 버튼을 한번 더 누르면 종료됩니다</string>
+    <string name="display_type">보기 방식</string>
+    <string name="display_type_cover">표지 보기</string>
+    <string name="display_type_list">목록 보기</string>
+    <string name="display_type_detail">자세히 보기</string>
+    <string name="option_menu_detail">상세보기</string>
+    <string name="option_menu_modify">수정</string>
+    <string name="view_all_u"><u>전체 보기 ></u></string>
+    <string name="select_complete">선택 완료</string>
+    <string name="setting_cover_image">메인 이미지 설정</string>
+    <string name="sorting">정렬</string>
+    <string name="sorting_recent">최근 본 순</string>
+    <string name="sorting_title">제목 순</string>
+    <string name="sorting_add_file">파일 추가 순</string>
+    <string name="sorting_file_size">파일 크기 순</string>
+    <string name="detail_title_view_date">최근 본 날짜 :&#160;</string>
+    <string name="detail_title_add_date">파일 추가 날짜 :&#160;</string>
+    <string name="detail_title_file_size">용량 :&#160;</string>
+    <string name="detail_title_page_count">페이지수 :&#160;</string>
+    <string name="detail_page_count">%d / %dp</string>
+    <string name="search_hint">검색어를 입력해주세요</string>
+    <string name="search_empty_result">에 관한 검색 결과가 없습니다.</string>
+    <string name="search_result">검색 : %d건</string>
+    <string name="business_information">사업자 정보</string>
+    <string name="company_name">주식회사 젬백스링크</string>
+    <string name="company_representative">황정일</string>
+    <string name="business_report_number">제 2010-서울영등포-0782호</string>
+    <string name="company_address">서울특별시 영등포구 영등포로 272(영등포동 33가)</string>
+    <string name="mail_order_business_report_number">통신판매업 신고번호</string>
+    <string name="file_list_empty">서재에 파일이 없습니다.</string>
+    <string name="file_add_guide">을 눌러 사용자 파일을 추가해주세요.</string>
+    <string name="dialog_wait">잠시만 기다려 주세요</string>
+    <string name="dialog_file_loading">파일을 불러오고 있습니다.</string>
+    <string name="sub_title_tutorial_step_1">삭제 - 정렬 - 보기방식</string>
+    <string name="sub_title_tutorial_step_2">검색 - 설정</string>
+    <string name="sub_title_tutorial_step_3">사용자 파일 추가</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

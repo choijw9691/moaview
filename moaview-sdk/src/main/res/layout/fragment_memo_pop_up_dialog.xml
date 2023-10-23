@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.MemoPopUpDialogFragment"
+    android:orientation="vertical"
+    android:background="@color/color_f4f6f9"
+    android:animateLayoutChanges="true">
+
+    <include layout="@layout/common_app_bar"
+        android:id="@+id/commonAppBar" />
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+               />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/imageView"
+                android:background="@drawable/round_corner">
+
+                <RelativeLayout
+                    android:id="@+id/layout_memo_top_page_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_memo_popup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:paddingHorizontal="10dp"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@drawable/background_round_line_main">
+
+                        <ImageView
+                            android:layout_width="7dp"
+                            android:layout_height="9dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_bookmark_s" />
+
+                        <TextView
+                            android:id="@+id/currentPage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="2dp"
+                            android:text="332P"
+                            android:textColor="@color/color_f45b7f"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:includeFontPadding="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="10dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/removeButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:textSize="11sp"
+                            android:text="@string/delete"
+                            android:textColor="@color/color_ffffff"
+                            android:fontFamily="@font/notosanskr_regular"
+                            android:includeFontPadding="false"
+                            android:backgroundTint="@color/color_212121"
+                            android:visibility="gone"
+                            app:cornerRadius="20dp"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_centerVertical="true"
+                            android:textSize="11sp"
+                            android:text="@string/save"
+                            android:textColor="@color/color_ffffff"
+                            android:fontFamily="@font/notosanskr_regular"
+                            android:includeFontPadding="false"
+                            android:backgroundTint="@color/color_212121"
+                            android:visibility="gone"
+                            app:cornerRadius="20dp"/>
+
+                    </LinearLayout>
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:id="@+id/button_save"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:minWidth="0dp"-->
+<!--                        android:minHeight="0dp"-->
+<!--                        android:layout_marginLeft="3dp"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:textSize="11sp"-->
+<!--                        android:text="@string/save"-->
+<!--                        android:textColor="@color/color_ffffff"-->
+<!--                        android:fontFamily="@font/notosanskr_regular"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:backgroundTint="@color/color_212121"-->
+<!--                        app:cornerRadius="20dp"/>-->
+
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:id="@+id/removeButton"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:minWidth="0dp"-->
+<!--                        android:minHeight="0dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_toLeftOf="@+id/button_save"-->
+<!--                        android:textSize="11sp"-->
+<!--                        android:text="@string/delete"-->
+<!--                        android:textColor="@color/color_ffffff"-->
+<!--                        android:fontFamily="@font/notosanskr_regular"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:backgroundTint="@color/color_212121"-->
+<!--                        app:cornerRadius="20dp"/>-->
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/contentTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="150dp"
+                    android:layout_below="@+id/layout_memo_top_page_button"
+                    android:gravity="top"
+                    android:paddingHorizontal="20dp"
+                    android:background="@android:color/transparent"
+                    android:maxLength="500"
+                    android:paddingBottom="30dp"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_212121"
+                    android:fontFamily="@font/notosanskr_regular"
+                    android:includeFontPadding="false"
+                    android:hint="@string/memo_add_hint"
+                    android:textColorHint="@color/color_a1a1a1"
+                    android:textCursorDrawable="@drawable/cursor" />
+
+                <TextView
+                    android:id="@+id/pageCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="20dp"
+                    android:text="213/500" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

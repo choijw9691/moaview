@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/BooksCountContainer"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/BooksCount"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="23dp"
+        android:gravity="center"
+        style="@style/text_header" />
+
+</LinearLayout>

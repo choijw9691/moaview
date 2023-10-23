@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.BookListFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="9dp"
+                android:paddingRight="18dp"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:backgroundTint="@color/white"
+                    app:elevation="0dp"
+                    app:title="@string/BookListFragment_title"
+                    app:titleTextColor="@color/black">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@android:color/transparent">
+
+                        <ImageView
+                            android:id="@+id/searchButton"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/icon_search" />
+
+                        <ImageView
+                            android:id="@+id/settingButton"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/icon_setting" />
+                    </LinearLayout>
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/basicRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@drawable/background_top_menu"
+                    android:elevation="0dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/changeViewButton"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp" />
+
+                    <ImageView
+                        android:id="@+id/alignButton"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="6dp"
+                        android:layout_toLeftOf="@+id/editButton"
+                        android:background="@drawable/sort_updown" />
+
+                    <ImageView
+                        android:id="@+id/editButton"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/sort_thrash" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/modifyRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/color_f4f6f9"
+                    android:elevation="0dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/checkIcon"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/check_on_2"
+                        android:backgroundTint="@color/color_f45b7f" />
+
+                    <TextView
+                        android:id="@+id/choiceBookTextView"
+                        style="@style/text_title_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/checkIcon"
+                        android:gravity="center"
+                        android:text="0권 선택" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_select_all"
+                        style="@style/text_option_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/button_cancel"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/select_all"
+                        app:cornerRadius="5dp"
+                        app:icon="@drawable/select"
+                        app:iconGravity="textStart"
+                        app:iconPadding="5dp"
+                        app:iconSize="10dp"
+                        app:iconTint="@null"
+                        app:rippleColor="@color/white"
+                        app:strokeColor="@color/color_c1c1c1"
+                        app:strokeWidth="1dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_cancel"
+                        style="@style/text_option_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:backgroundTint="@color/white"
+                        android:text="@string/cancel"
+                        app:cornerRadius="5dp"
+                        app:icon="@drawable/close"
+                        app:iconGravity="start"
+                        app:iconPadding="5dp"
+                        app:iconSize="10dp"
+                        app:iconTint="@null"
+                        app:rippleColor="@color/white"
+                        app:strokeColor="@color/color_c1c1c1"
+                        app:strokeWidth="1dp" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/removeButton"
+            style="@style/text_title_15"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/delete"
+            android:textColor="@color/color_ffffff"
+            android:visibility="gone"
+            app:backgroundTint="@color/color_f45b7f"
+            app:cornerRadius="0dp" />
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="50dp"
+        android:clickable="true"
+        android:scaleType="fitCenter"
+        app:backgroundTint="@color/color_000000"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="35dp"
+        app:srcCompat="@drawable/float_button"
+        app:tint="@null" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

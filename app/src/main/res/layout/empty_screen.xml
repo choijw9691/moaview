@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/emptyScreenContainer"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageview_empty_file_list"
+            android:layout_width="45dp"
+            android:layout_height="53dp"
+            android:background="@drawable/img_nofile"
+            android:layout_marginBottom="24dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textview_empty_file_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview_empty_file_list"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/notosanskr_medium"
+            android:includeFontPadding="false"
+            android:text="@string/file_list_empty"
+            android:textColor="@color/color_212121"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/textview_empty_file_list"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="3dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/img_plus"/>
+
+            <TextView
+                android:id="@+id/emptyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/file_add_guide"
+                android:textSize="13sp"
+                android:textColor="@color/color_a1a1a1"
+                android:fontFamily="@font/notosanskr_regular"
+                android:includeFontPadding="false" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

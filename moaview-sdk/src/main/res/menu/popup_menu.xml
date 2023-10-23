@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/removeAll"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:title="북마크+메모 삭제"
+
+        />
+    <item android:id="@+id/removeMemo"
+        android:title="메모 삭제"/>
+</menu>

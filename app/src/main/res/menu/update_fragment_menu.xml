@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ic_exit"
+        android:icon="@drawable/btn_close"
+        android:title="ic_search"
+        android:contentDescription="ic_search"
+        android:iconTint="@color/grey_500"
+        app:showAsAction="ifRoom" />
+</menu>

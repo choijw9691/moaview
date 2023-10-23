@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_f45b7f">#f45b7f</color>
+    <color name="color_212121">#212121</color>
+    <color name="color_a1a1a1">#a1a1a1</color>
+    <color name="color_828282">#828282</color>
+    <color name="color_f1f1f1">#f1f1f1</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_e1e1e1">#e1e1e1</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_c1c1c1">#c1c1c1</color>
+    <color name="color_f4f6f9">#c1c1c1</color>
+    <color name="color_e5e7f4">#e5e7f4</color>
+    <color name="color_99000000">#99000000</color>
+    <color name="white">#FFFFFFFF</color>   <!-- TODO ssin :: color_ffffff 로 쓰기 이거 삭제예정임-->
+</resources>

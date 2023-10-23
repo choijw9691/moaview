@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.moaview.moaview'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.moaview.moaview"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+
+def lifecycle_version = "2.4.0"
+def roomVersion = '2.5.2'
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation project(path: ':moaview-sdk')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation project(':moaview-sdk')
+
+    //viewmodel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
+    implementation "androidx.fragment:fragment-ktx:1.3.2"
+    implementation 'androidx.activity:activity-ktx:1.1.0'
+
+    //hilt
+    implementation "com.google.dagger:hilt-android:2.42"
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    kapt "com.google.dagger:hilt-compiler:2.42"
+
+    //coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.3.3"
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.13.0'    // image loader
+
+    //livedata
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    implementation "androidx.activity:activity-ktx:1.1.0"
+
+    //room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$roomVersion"
+
+    // gson
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    //datastore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    //jackson
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.13.+"
+}

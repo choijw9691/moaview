@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:background="@color/white"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginBottom="15dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_memo_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/checkButton"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_page_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_round_line_main">
+
+                    <ImageView
+                        android:layout_width="6dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_bookmark_s" />
+
+                    <TextView
+                        android:id="@+id/bookmarkPage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:text="12P"
+                        android:textColor="@color/color_f45b7f"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:includeFontPadding="false" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/bookmarkDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:text="2023.01.08"
+                    android:textSize="11sp"
+                    android:textColor="@color/color_828282"
+                    android:fontFamily="@font/roboto_regular"
+                    android:includeFontPadding="false"
+                    android:layout_toRightOf="@+id/layout_page_info" />
+
+                <ImageView
+                    android:id="@+id/popupmenu"
+                    android:layout_width="10dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/icon_option"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:paddingHorizontal="18dp"
+                android:background="@color/color_f1f1f1" />
+
+            <LinearLayout
+                android:id="@+id/memo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/layout_memo_image"
+                    android:layout_width="70dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="15dp">
+
+                    <ImageView
+                        android:id="@+id/image_memo"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                    />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="@string/direct_move"
+                        android:gravity="center"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_f45b7f"
+                        android:textColor="@color/color_ffffff"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/notosanskr_medium"
+                        android:includeFontPadding="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_memo_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/notosanskr_regular"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:stateListAnimator="@null"
+                        android:text="메모 추가"
+                        android:textColor="@color/color_a1a1a1"
+                        android:textSize="9sp"
+                        app:cornerRadius="20dp"
+                        app:icon="@drawable/img_plus"
+                        app:iconGravity="textTop"
+                        app:iconPadding="5dp"
+                        app:iconSize="18dp"
+                        app:iconTint="@null" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_memo_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/contentTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="70dp"
+                            android:layout_marginRight="15dp"
+                            android:text="얼마전에 블로그 이웃분에게 사황 빅맘을 어떻게 생각하시느냐는 질문을 받고,얼마전에 블로그 이웃분에게 사황 빅맘을 어떻얼마전에 블로그....... "
+                            android:textSize="12sp"
+                            android:textColor="@color/color_212121"
+                            android:fontFamily="@font/notosanskr_regular"
+                            android:includeFontPadding="false"
+                            android:ellipsize="end"
+                            android:maxLines="4" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/detailButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/display_type_detail_u"
+                            android:textSize="11sp"
+                            android:textColor="@color/color_212121"
+                            android:gravity="right"
+                            android:fontFamily="@font/notosanskr_regular"
+                            android:includeFontPadding="false"
+                            android:stateListAnimator="@null"
+                            android:backgroundTint="@android:color/transparent"
+                            app:icon="@drawable/btn_go"
+                            app:iconTint="@color/color_212121"
+                            app:iconSize="4dp"
+                            app:iconGravity="textEnd"
+                            app:iconPadding="0dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:buttonIcon="@drawable/checkbox_selector" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

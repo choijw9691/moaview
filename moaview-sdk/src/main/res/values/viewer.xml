@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_default">
+        <item name="android:fontFamily">@font/notosanskr_medium</item>
+        <item name="android:textColor">@color/color_212121</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="text_toolbar" parent="text_default">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="text_title" parent="text_default">
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="text_title_14" parent="text_title">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text_title_15" parent="text_title">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="text_title_18" parent="text_default">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text_sub">
+        <item name="android:textColor">@color/color_a1a1a1</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="text_sub_12" parent="text_sub">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_header">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_000000</item>
+    </style>
+
+    <style name="text_option_menu">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/color_828282</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="textview_slider_percent">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/color_f45b7f</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="text_page_turn_setting_10sp">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/notosanskr_regular</item>
+        <item name="android:textColor">@color/color_828282</item>
+    </style>
+
+    <style name="text_page_turn_setting_14sp">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/notosanskr_regular</item>
+        <item name="android:textColor">@color/color_212121</item>
+    </style>
+
+    <style name="text_16sp">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/color_212121</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="transparent_theme">
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="colorControlActivated">@android:color/transparent</item>
+    </style>
+</resources>

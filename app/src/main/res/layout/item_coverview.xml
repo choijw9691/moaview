@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:layout_marginHorizontal="9dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp" >
+
+        <ImageView
+            android:id="@+id/coverImage"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:layout_height="220dp"/>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom|right"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:buttonIcon="@drawable/checkbox_selector" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_toLeftOf="@+id/popupmenuContainer"
+            android:text="가나다라마바사아자차가타파사"
+            style="@style/text_title_14"/>
+
+        <LinearLayout
+            android:id="@+id/popupmenuContainer"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textID"
+            android:layout_alignParentRight="true"
+            android:gravity="right">
+
+            <ImageView
+                android:id="@+id/popupmenu"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginVertical="2dp"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:src="@drawable/icon_option" />
+        </LinearLayout>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slidebar"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/textID"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:valueFrom="0"
+            android:valueTo="100"
+            android:layout_toLeftOf="@+id/pagePercent"
+            android:layout_marginTop="10dp"
+            app:thumbRadius="0dp"
+            app:trackHeight="2dp"
+            app:trackColorActive="@color/color_f45b7f" />
+
+        <TextView
+            android:id="@+id/pagePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/slidebar"
+            android:text="43%"
+            style="@style/textview_slider_percent" />
+    </RelativeLayout>
+</LinearLayout>
